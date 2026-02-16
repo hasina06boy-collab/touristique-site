@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide Touristique Nosy Be</title>
+
+<style>
+    
+/* ===== Général ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* ===== Header ===== */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: url('kanto Nosy Be/Nosy Be.png') center/cover no-repeat;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+header h1 {
+    font-size: 3rem;
+    z-index: 1;
+    animation: slideDown 2s ease forwards;
+    opacity: 0;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    z-index: 1;
+    animation: fadeIn 3s 1s ease forwards;
+    opacity: 0;
+}
+
+/* ===== Navigation ===== */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 90, 190, 0.9);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 80px 20px;
+    min-height: 80vh;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #005bea;
+    font-size: 2.5rem;
+    position: relative;
+    animation: fadeSlide 1.5s ease forwards;
+    opacity: 0;
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ===== Cards ===== */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    text-align: center;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: riseUp 1s forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.6s; }
+.card:nth-child(3) { animation-delay: 0.9s; }
+.card:nth-child(4) { animation-delay: 1.2s; }
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    color: #005bea;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 25px;
+    background: #00c3ff;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #005bea;
+    transform: scale(1.1);
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #005bea;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* ===== Animations ===== */
+@keyframes slideDown {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeSlide {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes riseUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.2rem; }
+}
+    body {
+        background:yellow;
+    }
+    h1 {
+        color:yellow;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenue à Nosy Be</h1>
+    <p>Votre guide touristique moderne et interactif</p>
+</header>
+
+<nav>
+    <a href="#histoire">Histoire</a>
+    <a href="#activites">Activités</a>
+    <a href="#hebergement">Hébergements</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="histoire">
+    <h2>Histoire de Nosy Be</h2>
+    <p>Nosy Be est une île située au nord-ouest de Madagascar. Elle est célèbre pour ses plages magnifiques, sa nature luxuriante et sa culture unique. L'île a été influencée par les commerçants arabes, africains et européens au fil des siècles.</p>
+</section>
+    </nav>
+            <div class="logo">Nosy<span>Be</span></div>
+<section id="destinations">
+    <h2>Destinations</h2>
+    <p>Découvrez les plus beaux endroits touristiques.</p>
+</section>
+
+<section id="activites">
+    <h2>Activités</h2>
+    <p>Plongée, randonnée, plage, etc.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Contactez-nous pour plus d’informations.</p>
+</section>
+        </nav>
+        <div class="hero">
+            <h1>Bienvenue sur l'Île aux Parfums</h1>
+            <p>Découvrez les plages de sable blanc et la culture malgache.</p>
+            <a href="#" class="btn">Explorer</a>
+        </div>
+    </header>
+
+    <section id="destinations">
+        <h2>Lieux Incontournables</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=500" alt="Nosy Iranja">
+                <h3>Nosy Iranja</h3>
+                <p>Deux îles reliées par un banc de sable blanc paradisiaque.</p>
+                <a href="#" class="btn">En savoir plus</a>
+            </div>
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=500" alt="Mont Passot">
+                <h3>Mont Passot</h3>
+                <p>Le point culminant pour admirer un coucher de soleil unique.</p>
+                <a href="#" class="btn">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+<section id="activites">
+    <h2>Activités à faire</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="kanto Nosy Be/vue aérienne.png" alt="Vue aérienne de Nosy Be">
+            <h3>Vue aérienne</h3>
+            <p>Découvrez Nosy Be depuis le ciel pour admirer sa beauté naturelle unique.</p>
+            <a href="#" class="btn">En savoir plus</a>
+        </div>
+        <div class="card">
+           <img src="kanto Nosy Be/plongé Nosy Be.png" alt="Plongée">
+            <h3>Plongée sous-marine</h3>
+            <p>Explorez les récifs coralliens et la vie marine incroyable autour de l'île.</p>
+            <a href="#" class="btn">En savoir plus</a>
+        </div>
+        <div class="card">
+            <img src="kanto Nosy Be/Lokobe.png" alt="Lokobe">
+            <h3>Excursion à Lokobe</h3>
+            <p>Découvrez la réserve naturelle de Lokobe et observez les lémuriens.</p>
+            <a href="#" class="btn">En savoir plus</a>
+        </div>
+        <div class="card">
+            <img src="kanto Nosy Be/Nosy Be.png" alt="Plages de Nosy Be">
+            <h3>Plages et détente</h3>
+            <p>Profitez des plages de sable blanc et des couchers de soleil magnifiques.</p>
+            <a href="#" class="btn">En savoir plus</a>
+        </div>
+    </div>
+        
+</section>
+<section id="hebergement">
+    <h2>Hébergements</h2>
+    <p>Nosy Be offre des hôtels de luxe, bungalows sur la plage et lodges confortables pour tous les voyageurs.</p>
+</section>
+
+<section id="contact">
+    
+</a>
+</section>
+   <a href="../index.html" class="btn-retour">
+    <span class="icon">Retour</span>
+<footer>
+    <p>&copy; 2026 Guide Touristique Nosy Be</p>
+</footer>
+
+</body>
+</html>

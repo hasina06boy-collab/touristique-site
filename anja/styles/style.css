@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Touristique Nosy Be</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #00aaff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #0088cc;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            color: blue;
+        }
+        footer {
+            background-color: #00aaff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .activities img, .accommodation img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenue à Nosy Be</h1>
+    <p>Votre guide touristique complet</p>
+</header>
+
+<nav>
+    <a href="#histoire">Histoire</a>
+    <a href="#activites">Activités</a>
+    <a href="#hebergement">Hébergement</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="histoire">
+    <h2>Histoire de Nosy Be</h2>
+    <p>Nosy Be est une île située au nord-ouest de Madagascar. Elle est célèbre pour ses plages magnifiques, sa nature luxuriante et sa culture unique. L'île a été influencée par les commerçants arabes, africains et européens au fil des siècles.</p>
+</section>
+
+<section id="activites">
+    <h2>Activités à faire</h2>
+    <div class="activities">
+        <h3>Plongée sous-marine</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Diving_in_Madagascar.jpg" alt="Plongée à Nosy Be">
+        <p>Découvrez les récifs coralliens et la vie marine exceptionnelle autour de Nosy Be.</p>
+
+        <h3>Excursion à Lokobe</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Lokobe_Nosy_Be.jpg" alt="Lokobe">
+        <p>Explorez la réserve naturelle de Lokobe et observez les lémuriens et les espèces endémiques.</p>
+
+        <h3>Plages et détente</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Nosy_Be_Beach.jpg" alt="Plage Nosy Be">
+        <p>Profitez des plages de sable blanc et des couchers de soleil spectaculaires.</p>
+    </div>
+</section>
+
+<section id="hebergement">
+    <h2>Hébergements</h2>
+    <div class="accommodation">
+        <h3>Hôtel de luxe</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Nosy_Be_Resort.jpg" alt="Hôtel Nosy Be">
+        <p>Des hôtels avec piscine, spa et vue sur l'océan pour un séjour confortable.</p>
+
+        <h3>Bungalows sur la plage</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Nosy_Be_Bungalow.jpg" alt="Bungalow Nosy Be">
+        <p>Vivez l'expérience authentique en séjournant dans des bungalows près de la mer.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Pour plus d'informations, envoyez un email à <a href="mailto:info@nosybeguide.com">info@nosybeguide.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Guide Touristique Nosy Be</p>
+</footer>
+
+</body>
+</html>
