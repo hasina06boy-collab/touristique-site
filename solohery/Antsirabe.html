@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antsirabe - Ville d'Eaux</title>
+    <link rel="stylesheet" href="Antsirabe.css">
+</head>
+<body>
+    <header>
+        <h1>Antsirabe - Ville d'Eaux de Madagascar</h1>
+         <a href="../index.html" class="btn-retour">
+            <span class="icone">retour</span>
+        </a>  
+    </header>
+
+    <main>
+        <!-- INTRO -->
+        <section class="intro">
+            <h2>Introduction</h2>
+            <div class="card">
+                <img src="image/fond.jpeg" alt="Vue panoramique d'Antsirabe">
+                <p>Située au cœur des Hautes Terres de Madagascar, <strong>Antsirabe</strong> est une ville connue pour sa beauté naturelle, son climat tempéré et ses sources thermales. Son nom signifie « là où il y a du sel », en raison des lacs salés qui entourent la région.</p>
+            </div>
+            <div class="buttons">
+                <button onclick="openSection('histoire')">Lire l'histoire</button>
+                <button onclick="openSection('tourisme')">Découvrir les attractions</button>
+                <button onclick="openSection('culture')">Vie culturelle et économique</button>
+            </div>
+        </section>
+
+        <!-- HISTOIRE -->
+        <section id="histoire" class="hidden">
+            <button class="back" onclick="closeSection('histoire')">← Retour</button>
+            <h2>Histoire d'Antsirabe</h2>
+            <div class="card">
+                <img src="image/andraikiba.jpeg" alt="Bâtiments historiques d'Antsirabe">
+                <p>Antsirabe a été fondée à la fin du XIXᵉ siècle, pendant la période coloniale. Les premiers colons européens, notamment les Norvégiens et les Français, ont découvert la ville pour ses sources thermales riches en minéraux.</p>
+                <p>Durant l’époque coloniale française, la ville a été développée avec des bâtiments de style européen, des avenues larges et des infrastructures modernes. Les thermes restent encore aujourd’hui un symbole de cette période.</p>
+            </div>
+        </section>
+
+        <!-- TOURISME -->
+        <section id="tourisme" class="hidden">
+            <button class="back" onclick="closeSection('tourisme')">← Retour</button>
+            <h2>Les Attractions Touristiques</h2>
+
+            <div class="card">
+                <img src="image/lac Tritriva.jpg" alt="Lac Tritriva">
+                <p><strong>Lac Tritriva :</strong> Lac volcanique aux eaux turquoise avec légende locale fascinante.</p>
+            </div>
+
+            <div class="card">
+                <img src="image/cathédrale.jpeg" alt="Cathédrale d'Antsirabe">
+                <p><strong>La Cathédrale :</strong> Édifice colonial avec vitraux colorés et architecture imposante.</p>
+            </div>
+
+            <div class="card">
+                <img src="image/gare.jpeg" alt="Gare d'Antsirabe">
+                <p><strong>La Gare :</strong> Lieu historique de passage et symbole de la ville.</p>
+            </div>
+
+            <div class="card">
+                <img src="image/Statue.jpeg" alt="Statue à Antsirabe">
+                <p><strong>Statues locales :</strong> Reflétant l’histoire et la culture malgache.</p>
+            </div>
+
+            <div class="card">
+                <img src="image/ranomafana.jpg" alt="Sources thermales">
+                <p><strong>Les Sources Thermales :</strong> Idéales pour les bains relaxants et les traitements thérapeutiques.</p>
+            </div>
+        </section>
+
+        <!-- CULTURE -->
+        <section id="culture" class="hidden">
+            <button class="back" onclick="closeSection('culture')">← Retour</button>
+            <h2>Vie Culturelle et Économique</h2>
+            <div class="card">
+                <p>Antsirabe est un centre culturel dynamique. De nombreux festivals et événements artistiques y sont organisés chaque année, mettant en avant musique, danse et traditions malgaches.</p>
+                <p>Économiquement, la ville est un carrefour du commerce agricole et industriel : culture de légumes, production de textiles et artisanat sont les principaux moteurs économiques.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Antsirabe Tourisme</p>
+    </footer>
+
+    <script>
+        function openSection(id) {
+            document.querySelectorAll('main section').forEach(sec => sec.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+            document.getElementById(id).scrollIntoView({behavior: "smooth"});
+        }
+
+        function closeSection(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.querySelector('.intro').classList.remove('hidden');
+            document.querySelector('.intro').scrollIntoView({behavior: "smooth"});
+        }
+    
+    </script>
+    <a href="javascript:history.back()" class="btn-floating" 
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"  
+         <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>🏠 RETOUR </span>
+    </a>
+</body>
+</html>

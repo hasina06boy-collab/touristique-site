@@ -1,0 +1,181 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn-retour {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #D35400;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50PX;
+    box-shadow: 0 4px 15px rgba(211, 84, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1100;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    animation: fadeInDown 1s ease forwards;
+}
+
+/* Main layout */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #006d77;
+    animation: fadeInLeft 1s ease forwards;
+}
+
+/* Card styles */
+.card {
+    border-radius: 25px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 3s ease;
+    animation: fadeIn 1s ease forwards;
+
+    /* Couleur animée avec dégradé aléatoire */
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+
+.card:hover {
+    transform: translateY(-5px) rotateX(2deg);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+}
+
+/* Animation gradient dynamique */
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Image inside card */
+.card img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    margin-bottom: 1rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card img:hover {
+    transform: scale(1.07) rotateZ(1deg);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
+
+/* Buttons */
+button {
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    transition: transform 0.3s ease, background 3s ease, box-shadow 0.3s ease;
+
+    /* Dégradé animée pour tous les boutons */
+    background: linear-gradient(45deg, #00b4db, #0083b0, #00ff7f, #ff6f61);
+    background-size: 400% 400%;
+    animation: gradientShiftBtn 8s ease infinite;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Gradient animation bouton */
+@keyframes gradientShiftBtn {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Retour button */
+button.back {
+    display: inline-block;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ff7f50, #ff4500, #ffb347, #ff6f61);
+    background-size: 400% 400%;
+    animation: gradientShiftBtn 6s ease infinite;
+}
+
+button.back:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Hidden sections */
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {opacity:0; transform: translateY(-40px);}
+    100% {opacity:1; transform: translateY(0);}
+}
+
+@keyframes fadeInLeft {
+    0% {opacity:0; transform: translateX(-40px);}
+    100% {opacity:1; transform: translateX(0);}
+}
+
+@keyframes fadeIn {
+    0% {opacity:0; transform: scale(0.95);}
+    100% {opacity:1; transform: scale(1);}
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: white;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
